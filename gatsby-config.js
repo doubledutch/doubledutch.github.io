@@ -1,30 +1,34 @@
+const config = require('./config/website')
+const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
-  pathPrefix: '/',
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: 'https://doubledutch.github.io/',
-    title: 'DoubleDutch Developer Platform',
-    description: 'git push reality ideas',
-    keywords: ['DoubleDutch', 'developer', 'platform', 'events', 'app'],
-    canonicalUrl: 'https://doubledutch.github.io',
-    image: 'https://doubledutch.github.io/images/doubledutch.png',
+    siteUrl: config.siteUrl + pathPrefix,
+    title: config.siteTitle,
+    twitterHandle: config.twitterHandle,
+    description: config.siteDescription,
+    keywords: ['Video Blogger'],
+    canonicalUrl: config.siteUrl,
+    image: config.siteLogo,
     author: {
-      name: 'DoubleDutch',
+      name: config.author,
       minibio: `
         <strong>DoubleDutch</strong> Where events become movements.
       `,
     },
     organization: {
-      name: 'DoubleDutch',
-      url: 'https://doubledutch.me',
-      logo: 'https://doubledutch.me/wp-content/uploads/2018/08/website-logo.png',
+      name: config.organization,
+      url: config.siteUrl,
+      logo: config.siteLogo,
     },
     social: {
-      twitter: '@doubledutch',
-      fbAppID: 'DoubleDutchApp',
+      twitter: config.twitterHandle,
+      fbAppID: '',
     },
   },
   plugins: [
@@ -43,6 +47,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
+              backgroundColor: '#fafafa',
               maxWidth: 1035,
               sizeByPixelDensity: true,
             },
@@ -58,13 +63,25 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'DoubleDutch',
-        short_name: 'DDcreator',
-        start_url: '/',
-        background_color: '#fff',
-        theme_color: '#525dce',
+        name: config.siteTitle,
+        short_name: config.siteTitleShort,
+        description: config.siteDescription,
+        start_url: config.pathPrefix,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
         display: 'standalone',
-        icon: 'assets/logo.png',
+        icons: [
+          {
+            src: '/favicons/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/favicons/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
       },
     },
     {

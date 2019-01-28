@@ -5,7 +5,6 @@ import Layout from '../components/Layout'
 import Link from '../components/Link'
 import Container from 'components/Container'
 import { bpMaxSM, bpMaxMD } from '../lib/breakpoints'
-import SubscribeForm from '../components/SubscribeForm'
 
 const Hero = () => (
   <section
@@ -122,7 +121,6 @@ export default function Index({ data: { site } }) {
                 }
               `}
             >
-              <SubscribeForm />
             </div>
           </div>
         </Container>

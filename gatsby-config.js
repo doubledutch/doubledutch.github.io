@@ -5,28 +5,26 @@ require('dotenv').config({
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    siteUrl: 'https://egghead.io/',
-    title: 'The blog of an egghead creator',
-    description: 'This is where they post things!',
-    keywords: ['Video Blogger'],
-    canonicalUrl: 'https://egghead.io',
-    image: 'https://egghead.io/images/egghead.png',
+    siteUrl: 'https://doubledutch.github.io/',
+    title: 'DoubleDutch Developer Platform',
+    description: 'git push reality ideas',
+    keywords: ['DoubleDutch', 'developer', 'platform', 'events', 'app'],
+    canonicalUrl: 'https://doubledutch.github.io',
+    image: 'https://doubledutch.github.io/images/doubledutch.png',
     author: {
-      name: 'egghead.io',
+      name: 'DoubleDutch',
       minibio: `
-        <strong>egghead</strong> is the premier place on the internet for 
-        experienced developers to enhance their skills and stay current
-        in the fast-faced field of web development.
+        <strong>DoubleDutch</strong> Where events become movements.
       `,
     },
     organization: {
-      name: 'egghead.io LLC',
-      url: 'https://egghead.io',
-      logo: 'https://egghead.io/android-chrome-512x512.png',
+      name: 'DoubleDutch',
+      url: 'https://doubledutch.me',
+      logo: 'https://doubledutch.me/wp-content/uploads/2018/08/website-logo.png',
     },
     social: {
-      twitter: '@eggheadio',
-      fbAppID: '',
+      twitter: '@doubledutch',
+      fbAppID: 'DoubleDutchApp',
     },
   },
   plugins: [
@@ -60,8 +58,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Video Blogger',
-        short_name: 'EGGcreator',
+        name: 'DoubleDutch',
+        short_name: 'DDcreator',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#525dce',

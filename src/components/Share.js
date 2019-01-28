@@ -6,7 +6,6 @@ import {
   TwitterShareButton,
   FacebookShareButton,
   LinkedinShareButton,
-  RedditShareButton,
 } from 'react-share'
 
 const Share = ({ url, title, twitterHandle }) => (
@@ -45,6 +44,13 @@ const Share = ({ url, title, twitterHandle }) => (
     >
       Twitter
     </TwitterShareButton>
+    <LinkedinShareButton
+      url={url}
+      quote={title}
+      via={twitterHandle.split('@').join('')}
+    >
+      LinkedIn
+    </LinkedinShareButton>
     <FacebookShareButton
       url={url}
       quote={title}

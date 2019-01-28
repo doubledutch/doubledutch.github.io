@@ -15,10 +15,6 @@ const Footer = ({ author }) => (
         }
       `}
     >
-      <SubscribeForm />
-      <br />
-      <br />
-      <br />
       <div
         css={css`
           display: flex;
@@ -37,6 +33,7 @@ const Footer = ({ author }) => (
         <div>
           <Twitter />
           <GitHub />
+          <LinkedIn />
         </div>
       </div>
     </Container>

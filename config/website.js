@@ -24,5 +24,5 @@ module.exports = {
   twitter: 'https://twitter.com/doubledutch/',
   twitterHandle: '@doubledutch',
   github: 'https://github.com/doubledutch/',
-  linkedin: '',
+  linkedin: 'https://www.linkedin.com/company/doubledutch/',
 }

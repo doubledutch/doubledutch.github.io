@@ -113,7 +113,6 @@ export default ({
   noFooter,
 }) => {
   const {
-    title,
     description: siteDescription,
     keywords: siteKeywords,
   } = site.siteMetadata

@@ -8,6 +8,8 @@ import Container from 'components/Container'
 import { rhythm } from '../lib/typography'
 import theme from '../../config/theme'
 
+import tools from '../../assets/tools.png'
+
 const Hero = () => (
   <section
     css={css`
@@ -32,10 +34,10 @@ const Hero = () => (
           z-index: 5;
           line-height: 1.5;
           margin: 0;
-          max-width: ${rhythm(15)};
+          max-width: ${rhythm(25)};
         `}
       >
-        Your blog says the things you want to say.
+        Build on the DoubleDutch platform
       </h1>
     </Container>
     <div
@@ -68,12 +70,26 @@ export default function Index({ data: { site, allMdx } }) {
       headerColor={theme.colors.white}
       headerBg={theme.brand.primary}
     >
-      <Hero />
+      {/* <Hero /> */}
+
       <Container
         css={css`
-          padding-bottom: 0;
+          padding-bottom: 10px;
         `}
       >
+        <p>
+          <img src={tools} alt="DoubleDutch, React Native, Firebase" css={css`
+            display: block;
+            margin: 0 auto;
+          `} />
+        </p>
+        <p>Build inspiring, engaging experiences for attendees with the tools you love.</p>
+        <p>
+          <ul>
+            <li><Link to="/faq">FAQ</Link></li>
+            <li><Link to="/get-started">Get Started</Link></li>
+          </ul>
+        </p>
         {allMdx.edges.map(({ node: post }) => (
           <div
             key={post.id}

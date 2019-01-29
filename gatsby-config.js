@@ -12,7 +12,7 @@ module.exports = {
     title: config.siteTitle,
     twitterHandle: config.twitterHandle,
     description: config.siteDescription,
-    keywords: ['Video Blogger'],
+    keywords: ['DoubleDutch', 'Developer Platform'],
     canonicalUrl: config.siteUrl,
     image: config.siteLogo,
     author: {

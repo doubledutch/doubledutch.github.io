@@ -13,6 +13,8 @@ This site is based on the [egghead.io creator MDX Blog Starter Project](https://
 - Social media share buttons
 - Site & Theme config files
 
+favico stuff generated with https://realfavicongenerator.net/
+
 ## [➞ Site](https://doubledutch.github.io/)
 
 ## Setup

@@ -4,6 +4,7 @@ date: 2019-01-01
 title: 'Frequently Asked Questions'
 description: 'Questions about DDDP for non-developers'
 published: true
+author: 'Adam Liechty'
 banner: './banner.png'
 ---
 

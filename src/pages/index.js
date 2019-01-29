@@ -10,44 +10,44 @@ import theme from '../../config/theme'
 
 import tools from '../../assets/tools.png'
 
-const Hero = () => (
-  <section
-    css={css`
-      * {
-        color: ${theme.colors.white};
-      }
-      width: 100%;
-      background: ${theme.brand.primary};
-      padding: 20px 0 30px 0;
-      display: flex;
-    `}
-  >
-    <Container
-      css={css`
-        display: flex;
-        flex-direction: column;
-      `}
-    >
-      <h1
-        css={css`
-          position: relative;
-          z-index: 5;
-          line-height: 1.5;
-          margin: 0;
-          max-width: ${rhythm(25)};
-        `}
-      >
-        Build on the DoubleDutch platform
-      </h1>
-    </Container>
-    <div
-      css={css`
-        height: 150px;
-        overflow: hidden;
-      `}
-    />
-  </section>
-)
+// const Hero = () => (
+//   <section
+//     css={css`
+//       * {
+//         color: ${theme.colors.white};
+//       }
+//       width: 100%;
+//       background: ${theme.brand.primary};
+//       padding: 20px 0 30px 0;
+//       display: flex;
+//     `}
+//   >
+//     <Container
+//       css={css`
+//         display: flex;
+//         flex-direction: column;
+//       `}
+//     >
+//       <h1
+//         css={css`
+//           position: relative;
+//           z-index: 5;
+//           line-height: 1.5;
+//           margin: 0;
+//           max-width: ${rhythm(25)};
+//         `}
+//       >
+//         Build on the DoubleDutch platform
+//       </h1>
+//     </Container>
+//     <div
+//       css={css`
+//         height: 150px;
+//         overflow: hidden;
+//       `}
+//     />
+//   </section>
+// )
 
 const PostTitle = styled.h2`
   margin-bottom: ${rhythm(0.3)};
@@ -84,12 +84,10 @@ export default function Index({ data: { site, allMdx } }) {
           `} />
         </p>
         <p>Build inspiring, engaging experiences for attendees with the tools you love.</p>
-        <p>
-          <ul>
-            <li><Link to="/faq">FAQ</Link></li>
-            <li><Link to="/get-started">Get Started</Link></li>
-          </ul>
-        </p>
+        <ul>
+          <li><Link to="/faq">FAQ</Link></li>
+          <li><Link to="/getting-started">Get Started</Link></li>
+        </ul>
         {allMdx.edges.map(({ node: post }) => (
           <div
             key={post.id}

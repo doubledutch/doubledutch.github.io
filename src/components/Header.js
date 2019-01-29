@@ -16,7 +16,7 @@ const Header = ({
       width: 100%;
       flex-shrink: 0;
       background: none;
-      padding: 30px 0 0 0;
+      padding: 30px 0;
       background: ${dark ? '#090909' : `${bgColor}` || 'none'};
     `}
   >
@@ -77,12 +77,12 @@ const Header = ({
 
 export default Header
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//   }
+// `

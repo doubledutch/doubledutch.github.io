@@ -14,7 +14,7 @@ const createPosts = (createPage, createRedirect, edges) => {
       node.fields.redirects.forEach(fromPath => {
         createRedirect({
           fromPath,
-          toPath: pagePath,
+          toPath: '/' + pagePath,
           redirectInBrowser: true,
           isPermanent: true,
         })

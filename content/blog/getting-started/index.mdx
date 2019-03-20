@@ -20,6 +20,8 @@ import digitalBusinessCards from './digital-business-cards.png'
 import questionAnswer from './question-answer.png'
 import iceBreakerEspionage from './ice-breaker-espionage.png'
 
+*This article was updated on March 20, 2019 due to the [release of the DoubleDutch Developer Platform v2.0 tools](./tools-v2)*
+
 See this [FAQ for non-engineers](./faq).
 
 The DoubleDutch Developer Platform supports developing standalone extensions that can be hosted
@@ -67,7 +69,6 @@ prior contact with DoubleDutch Engineering.
 ## Prerequisites
 
 - [NodeJS]
-- [Yarn] (`brew install yarn`)
 - [Watchman] (`brew install watchman`)
 - [XCode] (to run in iOS simulator). If you have not used XCode before, be sure to open it once to
   accept the EULA and allow it to install the command line developer tools, or simply run `sudo xcodebuild -license accept`
@@ -91,17 +92,18 @@ doubledutch init
 This will populate that folder with a functioning React Native project setup to run as an extension
 within the DoubleDutch mobile app. By default the name of the extension will match the current folder
 name. In the example above, you can find the Javascript files for your project in
-`~/code/project/mobile/src/`. The file `home-view.js` is the root of your extension and has been
+`~/code/project/mobile/src/`. The file `HomeView.js` is the root of your extension and has been
 initialized with a simple "To do" style sample extension. This sample extension provides examples of
 using useful DoubleDutch libraries such as [@doubledutch/rn-client] (used by all DoubleDutch extensions
 built with React Native) and [@doubledutch/firebase-connector] (optional integration with Google Cloud
 Platform's Firebase Realtime Database for easy backend development).
 
-3. Run the sample code in the simulator
+3. Run the sample code in the simulator. Set up the
+   [DoubleDutch simulator](https://github.com/doubledutch/simulator) app for either iOS or Android.
 
 ```
 cd ~/code/project/mobile
-npm run ios
+npm start
 ```
 
 The Javascript packager will take a couple minutes to initialize the first time. After that, `⌘ R` in the
@@ -124,8 +126,8 @@ This bridge allows you to access key information about the current event in the 
 attendee that is logged in:
 
 ```js
-client.getCurrentUser(currentUser => console.log(currentUser))
-client.getCurrentEvent(currentEvent => console.log(currentEvent))
+client.getCurrentUser().then(currentUser => console.log(currentUser))
+client.getCurrentEvent().then(currentEvent => console.log(currentEvent))
 ```
 
 In the simulator, mock data is provided for local development.
@@ -155,5 +157,4 @@ See documentation for various DoubleDutch platform components:
 [@doubledutch/cli]: https://www.npmjs.com/package/@doubledutch/cli
 [NodeJS]: https://nodejs.org
 [Watchman]: http://brewformulas.org/Watchman
-[Yarn]: https://yarnpkg.com/en/docs/install
 [XCode]: https://developer.apple.com/xcode/

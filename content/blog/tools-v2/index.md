@@ -15,6 +15,8 @@ time and provide access to the latest features React and React Native have to of
 
 # Getting started
 
+See [Getting Started with DDDP](./getting-started) for full details.
+
 1. `npm i -g @doubledutch/cli@latest` to get the latest `doubledutch` command-line interface.
 1. Set up the [DoubleDutch simulator](https://github.com/doubledutch/simulator) app for either iOS
    or Android.

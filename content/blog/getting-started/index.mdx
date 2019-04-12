@@ -60,7 +60,7 @@ framework.
 
 # Developer Environment
 
-The developer environment is currently limited to run on a Mac.
+Developers can use either Mac or Windows.
 
 You do not need to have a DoubleDutch developer account in order to start developing a new extension.
 DoubleDutch extensions can be written and tested locally in the iOS or Android simulator without any
@@ -69,10 +69,14 @@ prior contact with DoubleDutch Engineering.
 ## Prerequisites
 
 - [NodeJS]
-- [Watchman] (`brew install watchman`)
-- [XCode] (to run in iOS simulator). If you have not used XCode before, be sure to open it once to
-  accept the EULA and allow it to install the command line developer tools, or simply run `sudo xcodebuild -license accept`
-  from the command line.
+- Either of:
+  - [XCode] (to run in iOS simulator). If you have not used XCode before, be sure to open it once to
+    accept the EULA and allow it to install the command line developer tools, or simply run `sudo xcodebuild -license accept`
+    from the command line.
+  - [Android Studio] (to run in Android virtual device)
+- [DoubleDutch simulator] for your choice of iOS or Android
+
+Note that [XCode] is only available for Mac. Developers using Windows must use [Android Studio].
 
 ## Getting Started
 
@@ -98,8 +102,8 @@ using useful DoubleDutch libraries such as [@doubledutch/rn-client] (used by all
 built with React Native) and [@doubledutch/firebase-connector] (optional integration with Google Cloud
 Platform's Firebase Realtime Database for easy backend development).
 
-3. Run the sample code in the simulator. Set up the
-   [DoubleDutch simulator](https://github.com/doubledutch/simulator) app for either iOS or Android.
+3. Run the sample code in the simulator. Set up the [DoubleDutch simulator] app for either iOS or
+   Android.
 
 ```
 cd ~/code/project/mobile
@@ -158,3 +162,5 @@ See documentation for various DoubleDutch platform components:
 [NodeJS]: https://nodejs.org
 [Watchman]: http://brewformulas.org/Watchman
 [XCode]: https://developer.apple.com/xcode/
+[Android Studio]: https://developer.android.com/studio/
+[DoubleDutch simulator]: https://github.com/doubledutch/simulator

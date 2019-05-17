@@ -121,7 +121,7 @@ module.exports = {
               {
                 allMdx(
                   limit: 1000,
-                  filter: { frontmatter: { published: { ne: false } } }
+                  filter: { frontmatter: { published: { ne: false }, date: { ne: null } } }
                   sort: { order: DESC, fields: [frontmatter___date] }
                 ) {
                   edges {

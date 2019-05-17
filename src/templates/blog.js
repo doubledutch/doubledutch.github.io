@@ -19,6 +19,7 @@ const Blog = ({
       allMdx.edges.find(
         edge =>
           edge.node.id === id &&
+          edge.node.frontmatter.date != null &&
           edge.node.parent.sourceInstanceName !== 'pages',
       ),
     )
